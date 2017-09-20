@@ -57,11 +57,7 @@ Shader "Projector/AlertCircle" {
 				
 				float2 center = fixed2(0.5,0.5);
 				float dist = distance(center,fixed2(i.uvShadow.x,i.uvShadow.y));				
-				if(dist > 0.5 || dist < 0.45) {
-					return fixed4(1,1,1,1);
-				}
-				
-				return _Color;
+				return (i.ignore || dist > 0.5 || dist < 0.45) ? fixed4(1,1,1,1) : _Color;
 			}		
 			
 			
