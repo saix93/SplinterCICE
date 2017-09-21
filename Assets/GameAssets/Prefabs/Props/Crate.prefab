@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4830936909845378}
   - component: {fileID: 33322270401896518}
   - component: {fileID: 23929709277460826}
-  - component: {fileID: 95211874663252338}
   m_Layer: 0
   m_Name: Crate
   m_TagString: Untagged
@@ -81,20 +80,3 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1904798904733856}
   m_Mesh: {fileID: 4300000, guid: 08b3b6eb21036fb4194cafd599e74c50, type: 3}
---- !u!95 &95211874663252338
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1904798904733856}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 08b3b6eb21036fb4194cafd599e74c50, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1

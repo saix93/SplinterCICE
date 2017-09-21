@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4590305114860204}
   - component: {fileID: 33973126862676078}
   - component: {fileID: 23617684768653168}
-  - component: {fileID: 111462769275831556}
   m_Layer: 0
   m_Name: Army_Bunker
   m_TagString: Untagged
@@ -81,17 +80,3 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1476382111879330}
   m_Mesh: {fileID: 4300000, guid: d2e223bb697d8be4bb8ade4cd8240c56, type: 3}
---- !u!111 &111462769275831556
-Animation:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1476382111879330}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 0}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
