@@ -368,6 +368,9 @@ PlayerSettings:
   switchUdpSendBufferSize: 9
   switchUdpReceiveBufferSize: 42
   switchSocketBufferEfficiency: 4
+  switchSocketInitializeEnabled: 1
+  switchNetworkInterfaceManagerInitializeEnabled: 1
+  switchPlayerConnectionEnabled: 1
   ps4NPAgeRating: 12
   ps4NPTitleSecret: 
   ps4NPTrophyPackPath: 
@@ -584,8 +587,8 @@ PlayerSettings:
       daydreamIconForeground: {fileID: 0}
       daydreamIconBackground: {fileID: 0}
   cloudServicesEnabled:
-    Build: 1
-    Collab: 1
+    Build: 0
+    Collab: 0
     UNet: 1
   facebookSdkVersion: 7.9.1
   apiCompatibilityLevel: 2
