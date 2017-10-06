@@ -35,9 +35,11 @@ public class InteractiveButton : MonoBehaviour
 
     public IEnumerator InteractCoroutine()
     {
-        interactionAnimation.Play();
-
-        yield return new WaitForSeconds(interactionAnimation.clip.length);
+        if (interactionAnimation != null)
+        {
+            interactionAnimation.Play();
+            yield return new WaitForSeconds(interactionAnimation.clip.length);
+        }
 
         if (activable != null)
         {

@@ -5,6 +5,8 @@ using Cinemachine;
 
 public class CinemachineTrigger : MonoBehaviour
 {
+    [SerializeField] GameObject[] canvasTextArray;
+
     CinemachineVirtualCamera cam;
 
     private void Awake()
@@ -17,6 +19,11 @@ public class CinemachineTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             cam.gameObject.SetActive(true);
+
+            foreach (GameObject text in canvasTextArray)
+            {
+                text.SetActive(true);
+            }
         }
     }
 
@@ -25,6 +32,11 @@ public class CinemachineTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             cam.gameObject.SetActive(false);
+
+            foreach (GameObject text in canvasTextArray)
+            {
+                text.SetActive(false);
+            }
         }
     }
 }
