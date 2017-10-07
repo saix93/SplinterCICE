@@ -5,7 +5,6 @@ using UnityEngine;
 public class Player : Soldier
 {
     [SerializeField] GameObject alertArea;
-    [SerializeField] PlayerObjectiveIndicator objectiveIndicator;
     PlayerMovement playerMovement;
     PlayerShooting playerShooting;
     PlayerInteraction playerInteraction;
@@ -26,10 +25,5 @@ public class Player : Soldier
         playerMovement.enabled = false;
         playerShooting.enabled = false;
         playerInteraction.enabled = false;
-    }
-
-    public PlayerObjectiveIndicator GetObjectiveIndicator()
-    {
-        return objectiveIndicator;
     }
 }
