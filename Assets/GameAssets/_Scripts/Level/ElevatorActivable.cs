@@ -8,6 +8,8 @@ public class ElevatorActivable : ActivableObjectLinked
     [Header("References")]
     [SerializeField] GameObject firstLight;
     [SerializeField] GameObject secondLight;
+    [SerializeField] PlayerObjectiveIndicator objectiveIndicator;
+    [SerializeField] Transform newObjective;
 
     [Header("Variables")]
     [SerializeField][Range(0, 5)] float lightSwapTime = 1;
@@ -30,6 +32,7 @@ public class ElevatorActivable : ActivableObjectLinked
             yield return new WaitForSeconds(1);
 
             StartCoroutine(ControlLights());
+            objectiveIndicator.SetNewObjective(newObjective);
 
             alreadyCalled = true;
         }

@@ -1,0 +1,86 @@
+fileFormatVersion: 2
+guid: 9a34f06504f2ee6458a482c99b4c979c
+timeCreated: 1507391634
+licenseType: Free
+SubstanceImporter:
+  serializedVersion: 5
+  materialInstances:
+  - serializedVersion: 16
+    name: Water_Damaged_Concrete
+    prototypeName: Water_Damaged_Concrete
+    shaderName: 
+    shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+    shaderKeywords: 
+    renderQueue: -1
+    lightmapFlags: 4
+    inputs: []
+    materialInformation:
+      serializedVersion: 5
+      offset: {x: 0, y: 0}
+      scale: {x: 1, y: 1}
+      generateMipmaps: 1
+      generateAllOutputs: 0
+      animationUpdateRate: 0
+    materialProperties:
+      serializedVersion: 3
+      texEnvs: []
+      floats: []
+      colors: []
+    textureParameters:
+    - name: Water_Damaged_Concrete_roughness
+      alphaSource: 0
+      filterMode: 1
+      aniso: 1
+      wrapMode: 0
+    - name: Water_Damaged_Concrete_baseColor
+      alphaSource: 6
+      filterMode: 1
+      aniso: 1
+      wrapMode: 0
+    - name: Water_Damaged_Concrete_metallic
+      alphaSource: 7
+      filterMode: 1
+      aniso: 1
+      wrapMode: 0
+    - name: Water_Damaged_Concrete_height
+      alphaSource: 0
+      filterMode: 1
+      aniso: 1
+      wrapMode: 0
+    - name: Water_Damaged_Concrete_normal
+      alphaSource: 0
+      filterMode: 1
+      aniso: 1
+      wrapMode: 0
+    - name: Water_Damaged_Concrete_ambientOcclusion
+      alphaSource: 0
+      filterMode: 1
+      aniso: 1
+      wrapMode: 0
+    textureAssignments:
+    - shaderProp: _MainTex
+      material: {instanceID: 0}
+      baseUID: 3884522409
+    - shaderProp: _BumpMap
+      material: {instanceID: 0}
+      baseUID: 3884639053
+    - shaderProp: _MetallicGlossMap
+      material: {instanceID: 0}
+      baseUID: 3884638273
+    - shaderProp: _OcclusionMap
+      material: {instanceID: 0}
+      baseUID: 3884639364
+    - shaderProp: _ParallaxMap
+      material: {instanceID: 0}
+      baseUID: 3884638689
+    buildTargetSettings:
+    - serializedVersion: 2
+      buildTarget: 
+      textureWidth: 512
+      textureHeight: 512
+      textureFormat: 0
+      loadingBehavior: 1
+  deletedPrototypes: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
