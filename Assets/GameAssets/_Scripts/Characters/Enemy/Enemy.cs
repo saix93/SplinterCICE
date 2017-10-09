@@ -45,6 +45,13 @@ public class Enemy : Soldier
     {
         base.Die();
 
+        SpecialEnemy specialEnemy = this.GetComponent<SpecialEnemy>();
+
+        if (specialEnemy != null)
+        {
+            specialEnemy.Die();
+        }
+
         viewCone.SetActive(false);
         enemyMovement.enabled = false;
         enemyShooting.enabled = false;

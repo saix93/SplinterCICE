@@ -19,4 +19,9 @@ public class PlayerObjectiveIndicator : MonoBehaviour
     {
         objective = newObjective;
     }
+
+    public Transform GetCurrentObjective()
+    {
+        return objective;
+    }
 }

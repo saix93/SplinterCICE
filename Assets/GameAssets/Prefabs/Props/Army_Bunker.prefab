@@ -21,12 +21,13 @@ GameObject:
   - component: {fileID: 4590305114860204}
   - component: {fileID: 33973126862676078}
   - component: {fileID: 23617684768653168}
+  - component: {fileID: 65342151661580964}
   m_Layer: 0
   m_Name: Army_Bunker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 1
+  m_StaticEditorFlags: 9
   m_IsActive: 1
 --- !u!4 &4590305114860204
 Transform:
@@ -35,8 +36,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1476382111879330}
   m_LocalRotation: {x: -0, y: 0.89965254, z: -0, w: 0.43660662}
-  m_LocalPosition: {x: 25.84, y: 35.01, z: 86.25}
-  m_LocalScale: {x: 0.37846005, y: 0.37846, z: 0.45743006}
+  m_LocalPosition: {x: 19.68404, y: 35.01, z: 78.43061}
+  m_LocalScale: {x: 0.37846354, y: 0.37846, z: 0.45743448}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -80,3 +81,15 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1476382111879330}
   m_Mesh: {fileID: 4300000, guid: d2e223bb697d8be4bb8ade4cd8240c56, type: 3}
+--- !u!65 &65342151661580964
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1476382111879330}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 12.382362, y: 9.2805, z: 28.041843}
+  m_Center: {x: 0.17752005, y: 4.617322, z: 1.25058}
