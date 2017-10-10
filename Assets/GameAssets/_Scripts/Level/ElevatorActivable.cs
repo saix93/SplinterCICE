@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ElevatorActivable : ActivableObjectLinked
 {
@@ -38,7 +39,7 @@ public class ElevatorActivable : ActivableObjectLinked
         }
     }
 
-    public IEnumerator ControlLights()
+    IEnumerator ControlLights()
     {
         bool aux = true;
         WaitForSeconds wait = new WaitForSeconds(lightSwapTime);
@@ -57,5 +58,14 @@ public class ElevatorActivable : ActivableObjectLinked
 
         firstLight.SetActive(false);
         secondLight.SetActive(false);
+    }
+
+    public IEnumerator EndLevel()
+    {
+        StartCoroutine(ControlLights());
+
+        yield return new WaitForSeconds(8);
+
+        SceneManager.LoadScene("MillitaryBase");
     }
 }

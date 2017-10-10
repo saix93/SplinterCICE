@@ -15,7 +15,7 @@ public class ElevatorTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             animator.SetTrigger("Activate");
-            StartCoroutine(elevatorActivable.ControlLights());
+            StartCoroutine(elevatorActivable.EndLevel());
 
             player.GetComponent<NavMeshAgent>().enabled = false;
             player.GetComponent<Rigidbody>().isKinematic = false;
