@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : Soldier
 {
@@ -26,6 +27,13 @@ public class Player : Soldier
         playerMovement.enabled = false;
         playerShooting.enabled = false;
         playerInteraction.enabled = false;
+
+        Invoke("LoadMainMenu", 3);
+    }
+
+    void LoadMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
     }
 
     public PlayerObjectiveIndicator GetObjectiveIndicator()
