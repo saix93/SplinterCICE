@@ -11,6 +11,8 @@ public class ElevatorActivable : ActivableObjectLinked
     [SerializeField] GameObject secondLight;
     [SerializeField] PlayerObjectiveIndicator objectiveIndicator;
     [SerializeField] Transform newObjective;
+    [SerializeField] AudioSource audioElevatorButton;
+    [SerializeField] AudioSource audioElevator;
 
     [Header("Variables")]
     [SerializeField][Range(0, 5)] float lightSwapTime = 1;
@@ -30,9 +32,12 @@ public class ElevatorActivable : ActivableObjectLinked
         {
             animator.SetTrigger("Activate");
 
+            audioElevatorButton.Play();
+
             yield return new WaitForSeconds(1);
 
             StartCoroutine(ControlLights());
+            audioElevator.Play();
             objectiveIndicator.SetNewObjective(newObjective);
 
             alreadyCalled = true;

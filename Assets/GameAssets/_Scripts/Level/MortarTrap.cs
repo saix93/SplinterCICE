@@ -11,6 +11,8 @@ public class MortarTrap : ActivableObjectLinked
     [SerializeField] GameObject _explosionPrefab;
     [SerializeField] GameObject interaction;
     [SerializeField] GameObject canvas;
+    [SerializeField] AudioSource audioExplosion;
+    [SerializeField] AudioSource audioMortar;
 
     Animator usableMortarAmmoAnim;
 
@@ -21,7 +23,9 @@ public class MortarTrap : ActivableObjectLinked
 
     public override IEnumerator ActivateCoroutine()
     {
-        WaitForSeconds wait2Seconds = new WaitForSeconds(2);
+        audioMortar.Play();
+
+        WaitForSeconds wait2Seconds = new WaitForSeconds(3);
         cam.gameObject.SetActive(true);
 
         yield return wait2Seconds;
@@ -29,8 +33,6 @@ public class MortarTrap : ActivableObjectLinked
         usableMortarAmmoAnim.SetTrigger("Activate");
 
         yield return new WaitForSeconds(3);
-
-        GameObject explosion = Instantiate(_explosionPrefab, usableMortarAmmo.position, usableMortarAmmo.rotation);
 
         Collider[] afectedByMortar = Physics.OverlapSphere(usableMortarAmmo.position, 5);
 
@@ -43,6 +45,9 @@ public class MortarTrap : ActivableObjectLinked
             }
         }
 
+        GameObject explosion = Instantiate(_explosionPrefab, usableMortarAmmo.position, usableMortarAmmo.rotation);
+
+        audioExplosion.Play();
         Destroy(explosion, 5);
         Destroy(usableMortarAmmo.gameObject);
 

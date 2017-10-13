@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerShooting : SoldierShooting
 {
-    [SerializeField]
-    LayerMask cameraRaycastLayerMask;
+    [SerializeField] LayerMask cameraRaycastLayerMask;
+    [SerializeField] AudioSource audioShot;
 
     PlayerMovement playerMovement;
     PlayerInteraction playerInteraction;
@@ -63,6 +63,7 @@ public class PlayerShooting : SoldierShooting
 
                         if (Input.GetMouseButtonDown(0))
                         {
+                            audioShot.Play();
                             hitInfo.collider.GetComponent<Soldier>().Die();
                         }
                     }

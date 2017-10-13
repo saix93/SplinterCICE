@@ -6,6 +6,7 @@ public class EnemyShooting : SoldierShooting
 {
     [SerializeField] float alertTime = 4;
     [SerializeField] float pursueTime = 5;
+    [SerializeField] AudioSource audioShoot;
 
     Soldier player;
     Enemy enemy;
@@ -80,6 +81,7 @@ public class EnemyShooting : SoldierShooting
     {
         enemyMovement.SetRotation(player.transform.position - this.transform.position);
         yield return new WaitForSeconds(0.5f);
+        audioShoot.Play();
         player.Die();
     }
 

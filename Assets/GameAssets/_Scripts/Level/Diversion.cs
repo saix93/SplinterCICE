@@ -13,6 +13,7 @@ public class Diversion : ActivableObjectLinked
     [SerializeField] NavMeshAgent secondEnemyAgent;
     [SerializeField] GameObject interaction;
     [SerializeField] GameObject canvas;
+    [SerializeField] AudioSource[] audioBarrels;
 
     private void Start()
     {
@@ -41,6 +42,11 @@ public class Diversion : ActivableObjectLinked
         yield return wait;
 
         ChangeKinematismOnRigidbodies(false);
+
+        foreach (AudioSource audio in audioBarrels)
+        {
+            audio.PlayDelayed(UnityEngine.Random.Range(1, 3));
+        }
 
         if (firstEnemyAgent.enabled)
         {
