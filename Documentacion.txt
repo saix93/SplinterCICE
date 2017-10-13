@@ -1,0 +1,54 @@
+Nombre y apellidos del alumno:
+	Raúl Torres González
+
+Listado de requisitos implementados total o parcialmente:
+	Requisitos básicos:
+		- Escenario:
+			El escenario consta de dos escenas, una interior y otra exterior.
+			La escena exterior representa una base militar mientras que la escena interior es el muelle de la misma.
+		- Personajes:
+			Hay dos modelos de personajes diferentes:
+			El protagonista, un robot especializado en misiones de infiltración.
+			Los enemigos, soldados de un ejército desconocido.
+		- Héroe
+		- Enemigos
+		- Alertas por movimiento
+		- Meta:
+			Se ha añadido un sistema que muestra el objetivo actual de nuestro personaje, representado por una flecha en el suelo.
+			El objetivo del Héroe es infiltrarse en la base enemiga, eliminar al general del ejército desconocido y escapar.
+		- Cadáveres
+		- Menú principal
+		- Menú de End Game
+		- Sonidos:
+			Se han añadido sonidos de:
+				+ Pasos
+				+ Disparos
+				+ Ambiente
+				+ Objetos interactuables
+				+ Vehículos
+	Requisitos avanzados:
+		- Palancas y trampas:
+			En la zona exterior de la base militar hay un mortero que se puede usar para eliminar a un grupo de enemigos que está guardando la entrada a la zona del campamento del general.
+		- Enemigos curiosos:
+			Los enemigos poseen el estado de "Pursue" n el que irán a la posición del Héroe en caso de oír algún ruido.
+		- Otras mecánicas:
+			Además del mortero, existe otra manera de entrar en el campamento del general sin ser visto:
+				Puedes hacer una distracción para hacer que los guardias de las puertas se alejen de sus puestos.
+			Para poder escapar necesitas recuperar las llaves de un coche que hay aparcado cerca de la puerta del campamento. Las tiene un guardia que patrulla por la zona central de la base.
+		- Cinemática:
+			+ Cinemática al empezar el juego, que muestra cómo nuestro personaje se infiltra en la base enemiga.
+			+ Otra cinemática al conseguir escapar de la base enemiga, en la que nuestro héroe escapa utilizando un vehículo.
+		- Iluminación y efectos de cámara:
+			+ Iluminación bakeada
+			+ Materiales emisivos para simular una luz real
+			+ Reflejos en el agua
+
+Detalles más relevantes sobre la implementación (si los hubiese):
+	Hay muchos canvas por el mapa, en ambas escenas.
+	En la escena del muelle se utilizan para mostrarle al jugador las mecánicas del juego, a modo de tutorial.
+	En la escena de la base militar se utilizan para señalizar objetos importantes que el jugador puede utilizar a su favor.
+
+Dudas y mayores dificultades encontradas (si las hubiese):
+	- El uso de las timelines, muchas veces terminaba de hacer una animación (por ejemplo, la de un vehículo moviéndose) y los objetos acababan en lugares donde no deberían estar. No sé si es un bug de Timeline o yo lo estaba utilizando de forma errónea.
+	- En la zona del mortero, hay una cámara virtual de cinemachine que sigue al proyectil hasta que este explota. Creo que debido a un bug de Cinemachine, la cámara perdía constantemente las referencias al proyectil, así que tuve que hacer un script auxiliar para evitar este problema
+
