@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class EscapeTrigger : MonoBehaviour
 {
@@ -20,10 +21,17 @@ public class EscapeTrigger : MonoBehaviour
     {
         if (other.CompareTag("Player") && player.GetComponent<PlayerCarEscape>().HasKeys() && player.GetObjectiveIndicator().GetCurrentObjective() == objectiveManager.GetCar())
         {
-            // Activar cinemática de salida
             player.GetComponent<Rigidbody>().isKinematic = true;
             player.GetComponent<NavMeshAgent>().enabled = false;
+            player.GetComponent<PlayerMovement>().enabled = false;
             timeline.SetActive(true);
+
+            Invoke("LoadEndGameScene", 18);
         }
+    }
+
+    void LoadEndGameScene()
+    {
+        SceneManager.LoadScene("EndGameMenu", LoadSceneMode.Single);
     }
 }

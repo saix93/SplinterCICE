@@ -8,6 +8,7 @@ public class ViewCone : MonoBehaviour
     [SerializeField] Color idleColor = Color.green;
     [SerializeField] Color alertColor = Color.yellow;
     [SerializeField] Color attackColor = Color.red;
+    [SerializeField] Color pursueColor = Color.magenta;
 
     Enemy enemy;
     Projector projector;
@@ -35,6 +36,9 @@ public class ViewCone : MonoBehaviour
                 break;
             case Enemy.State.Attack:
                 projector.material.color = attackColor;
+                break;
+            case Enemy.State.Pursue:
+                projector.material.color = pursueColor;
                 break;
         }
 

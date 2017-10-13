@@ -8,7 +8,8 @@ public class Enemy : Soldier
     {
         Idle,
         Alert,
-        Attack
+        Attack,
+        Pursue
     }
 
     [SerializeField]

@@ -5,15 +5,15 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/GameAssets/Scenes/menu.unity
+  - enabled: 1
+    path: Assets/GameAssets/Scenes/MainMenu.unity
     guid: 63768d7eda1527643913961735ecd8be
-  - enabled: 0
-    path: Assets/GameAssets/Scenes/game.unity
-    guid: 01d2504d77dc7f54c98f6b2c18b88cc5
   - enabled: 1
     path: Assets/GameAssets/Scenes/Docks.unity
     guid: d3fcd66ac9b0b8c488cde29bc3cd27a3
   - enabled: 1
     path: Assets/GameAssets/Scenes/MillitaryBase.unity
     guid: 4f26cdf2e4d414b49ac5efa7ed3e9e2c
+  - enabled: 1
+    path: Assets/GameAssets/Scenes/EndGameMenu.unity
+    guid: a4084ac7f288d1040b6bc73f7ddf5ede

@@ -104,6 +104,11 @@ public class EnemyMovement : MonoBehaviour
         }
     }
 
+    public void SetDestination(Vector3 position)
+    {
+        agent.SetDestination(position);
+    }
+
     bool HasPath()
     {
         return pathPointsRoot != null;

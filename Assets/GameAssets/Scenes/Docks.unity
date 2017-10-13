@@ -11494,7 +11494,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2f08390cc094e5448cf0f7194c0c3ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _alertTime: 4
+  alertTime: 4
+  pursueTime: 5
 --- !u!114 &656916314
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14039,6 +14040,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &795864076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 795864074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b2a71594c8b6a8448e55f34545d08a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _frecuency: 1.5
+  _amplitude: 0.05
 --- !u!1001 &797649944
 Prefab:
   m_ObjectHideFlags: 0
@@ -15168,6 +15182,10 @@ Prefab:
     - target: {fileID: 400000, guid: bcae914220acd4907840a029bb9d9aec, type: 2}
       propertyPath: m_LocalScale.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: bcae914220acd4907840a029bb9d9aec, type: 2}
+      propertyPath: textureSize
+      value: 256
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bcae914220acd4907840a029bb9d9aec, type: 2}
@@ -31811,6 +31829,7 @@ MonoBehaviour:
   idleColor: {r: 0.5, g: 1, b: 0.5, a: 1}
   alertColor: {r: 1, g: 0.9607453, b: 0.50735295, a: 1}
   attackColor: {r: 1, g: 0.4705882, b: 0.4705882, a: 1}
+  pursueColor: {r: 1, g: 0, b: 1, a: 1}
 --- !u!119 &1466906066
 Projector:
   m_ObjectHideFlags: 0

@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class EnemyShooting : SoldierShooting
 {
-    [SerializeField]
-    float _alertTime = 4;
+    [SerializeField] float alertTime = 4;
+    [SerializeField] float pursueTime = 5;
 
     Soldier player;
     Enemy enemy;
     EnemyMovement enemyMovement;
+
+    Vector3 currentPosition;
+    Vector3 noisePosition;
 
     protected override void Awake()
     {
@@ -47,6 +50,7 @@ public class EnemyShooting : SoldierShooting
             ActivateAlert();
 
             enemyMovement.SetRotation(player.transform.position - this.transform.position);
+            noisePosition = player.transform.position;
         }
     }
 
@@ -54,7 +58,8 @@ public class EnemyShooting : SoldierShooting
     {
         if (other.attachedRigidbody && other.attachedRigidbody.CompareTag("Player"))
         {
-            StartCoroutine(CancelAlertCoroutine());
+            enemy.SetState(Enemy.State.Pursue);
+            StartCoroutine(StartPursueCoroutine());
         }
     }
 
@@ -78,9 +83,16 @@ public class EnemyShooting : SoldierShooting
         player.Die();
     }
 
-    IEnumerator CancelAlertCoroutine()
+    IEnumerator StartPursueCoroutine()
     {
-        yield return new WaitForSeconds(_alertTime);
+        yield return new WaitForSeconds(alertTime);
+        currentPosition = this.transform.position;
+        enemyMovement.SetDestination(noisePosition);
+
+        yield return new WaitForSeconds(pursueTime);
+        enemyMovement.SetDestination(currentPosition);
+
+        yield return new WaitForSeconds(pursueTime);
         enemy.SetState(Enemy.State.Idle);
         enemyMovement.ResumeMovement();
     }

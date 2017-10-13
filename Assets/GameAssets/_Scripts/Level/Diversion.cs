@@ -11,6 +11,8 @@ public class Diversion : ActivableObjectLinked
     [SerializeField] Transform secondEnemyPoint;
     [SerializeField] NavMeshAgent firstEnemyAgent;
     [SerializeField] NavMeshAgent secondEnemyAgent;
+    [SerializeField] GameObject interaction;
+    [SerializeField] GameObject canvas;
 
     private void Start()
     {
@@ -40,7 +42,17 @@ public class Diversion : ActivableObjectLinked
 
         ChangeKinematismOnRigidbodies(false);
 
-        firstEnemyAgent.SetDestination(firstEnemyPoint.position);
-        secondEnemyAgent.SetDestination(secondEnemyPoint.position);
+        if (firstEnemyAgent.enabled)
+        {
+            firstEnemyAgent.SetDestination(firstEnemyPoint.position);
+        }
+
+        if (secondEnemyAgent.enabled)
+        {
+            secondEnemyAgent.SetDestination(secondEnemyPoint.position);
+        }
+
+        interaction.SetActive(false);
+        canvas.SetActive(false);
     }
 }
